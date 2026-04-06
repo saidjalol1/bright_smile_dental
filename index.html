@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bright Smile Dental Austin | Dr. Sarah Mitchell DDS | (512) 847-3290</title>
+    <meta name="description" content="Austin's trusted family and cosmetic dentist. Dr. Sarah Mitchell DDS offers teeth whitening, implants, Invisalign, veneers & emergency care. Accepting new patients. Call (512) 847-3290.">
+    
+    <!-- Open Graph tags for social sharing -->
+    <meta property="og:title" content="Bright Smile Dental Austin | Dr. Sarah Mitchell DDS">
+    <meta property="og:description" content="Austin's trusted family and cosmetic dentist. Accepting new patients. Call (512) 847-3290.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://brightsmileaustin.com">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://brightsmileaustin.com">
+
+    <!-- Favicon (Inline SVG) -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23FFFFFF'/><path d='M50 20 C25 20 20 40 20 55 C20 75 35 85 45 85 C50 85 50 70 50 70 C50 70 50 85 55 85 C65 85 80 75 80 55 C80 40 75 20 50 20 Z' fill='%230B6E7A'/></svg>">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- Schema.org Dentist structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Dentist",
+      "name": "Bright Smile Dental",
+      "telephone": "+1-512-847-3290",
+      "url": "https://brightsmileaustin.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "4821 Burnet Road, Suite 105",
+        "addressLocality": "Austin",
+        "addressRegion": "TX",
+        "postalCode": "78756",
+        "addressCountry": "US"
+      },
+      "openingHoursSpecification": [
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": "Monday", "opens": "08:00", "closes": "17:00" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": "Tuesday", "opens": "08:00", "closes": "18:00" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": "Wednesday", "opens": "08:00", "closes": "17:00" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": "Thursday", "opens": "09:00", "closes": "19:00" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "08:00", "closes": "15:00" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "14:00" }
+      ],
+      "priceRange": "$$",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "247"
+      }
+    }
+    </script>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        deepTeal: '#0B6E7A',
+                        deepTealDark: '#08535c',
+                        softMint: '#E8F7F8',
+                        warmGold: '#D4A843',
+                        warmGoldHover: '#b58e37'
+                    },
+                    fontFamily: {
+                        sans: ['"DM Sans"', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif'],
+                    },
+                    borderRadius: {
+                        'xl': '16px',
+                        '2xl': '24px',
+                    },
+                    boxShadow: {
+                        'soft': '0 10px 40px -10px rgba(11, 110, 122, 0.08)',
+                        'nav': '0 4px 20px -2px rgba(11, 110, 122, 0.05)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <style>
+        :root {
+            --color-teal: #0B6E7A;
+            --color-mint: #E8F7F8;
+            --color-gold: #D4A843;
+            --color-white: #FFFFFF;
+            --radius-soft: 20px;
+            --spacing-section: 6rem;
+        }
+
+        body {
+            color: #334155;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3, h4, h5, .font-serif {
+            color: var(--color-teal);
+        }
+
+        .clip-bottom-curve {
+            position: relative;
+        }
+        .clip-bottom-curve::after {
+            content: '';
+            position: absolute;
+            bottom: -50px;
+            left: 0;
+            right: 0;
+            height: 100px;
+            background: inherit;
+            clip-path: ellipse(55% 50% at 50% 0%);
+            z-index: 10;
+        }
+
+        .clip-top-curve {
+            position: relative;
+        }
+        .clip-top-curve::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            left: 0;
+            right: 0;
+            height: 100px;
+            background: inherit;
+            clip-path: ellipse(55% 50% at 50% 100%);
+            z-index: 10;
+        }
+
+        /* Scroll Animation Classes */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .stagger-1 { transition-delay: 0.1s; }
+        .stagger-2 { transition-delay: 0.2s; }
+        .stagger-3 { transition-delay: 0.3s; }
+
+        /* Button base styles */
+        .btn-base {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.75rem 2rem;
+            min-height: 48px;
+            border-radius: 9999px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        /* Nav Transition */
+        #main-nav {
+            transition: all 0.3s ease;
+        }
+        #main-nav.scrolled {
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: var(--tw-shadow-nav);
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+
+        /* Mobile Menu */
+        #mobile-menu {
+            transition: transform 0.3s ease-in-out;
+            transform: translateX(100%);
+        }
+        #mobile-menu.open {
+            transform: translateX(0);
+        }
+
+        /* Error state for forms */
+        .input-error {
+            border-color: #ef4444 !important;
+            background-color: #fef2f2 !important;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. Navigation -->
+    <nav id="main-nav" class="fixed w-full z-50 py-5 transition-all duration-300 bg-transparent text-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-3 z-50">
+                    <svg width="32" height="32" viewBox="0 0 100 100" class="text-deepTeal" fill="currentColor">
+                        <path d="M50 20 C25 20 20 40 20 55 C20 75 35 85 45 85 C50 85 50 70 50 70 C50 70 50 85 55 85 C65 85 80 75 80 55 C80 40 75 20 50 20 Z"/>
+                    </svg>
+                    <span class="font-sans font-bold text-xl text-deepTeal tracking-tight">Bright Smile Dental</span>
+                </a>
+
+                <!-- Desktop Links -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#" class="font-medium hover:text-deepTeal transition-colors">Home</a>
+                    <a href="#services" class="font-medium hover:text-deepTeal transition-colors">Services</a>
+                    <a href="#about" class="font-medium hover:text-deepTeal transition-colors">About Dr. Mitchell</a>
+                    <a href="#patient-info" class="font-medium hover:text-deepTeal transition-colors">Patient Info</a>
+                    <a href="#contact" class="font-medium hover:text-deepTeal transition-colors">Contact</a>
+                </div>
+
+                <!-- Desktop CTA -->
+                <div class="hidden md:block">
+                    <a href="#contact" class="btn-base bg-deepTeal text-white hover:bg-deepTealDark shadow-md hover:shadow-lg">
+                        Book Appointment
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden z-50 p-2 text-deepTeal focus:outline-none" aria-label="Toggle Menu">
+                    <svg id="menu-icon" class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu" class="fixed inset-0 bg-white z-40 flex flex-col pt-24 px-6 md:hidden shadow-2xl">
+            <a href="#" class="mobile-link text-2xl font-serif mb-6 text-deepTeal">Home</a>
+            <a href="#services" class="mobile-link text-2xl font-serif mb-6 text-deepTeal">Services</a>
+            <a href="#about" class="mobile-link text-2xl font-serif mb-6 text-deepTeal">About Dr. Mitchell</a>
+            <a href="#patient-info" class="mobile-link text-2xl font-serif mb-6 text-deepTeal">Patient Info</a>
+            <a href="#contact" class="mobile-link text-2xl font-serif mb-8 text-deepTeal">Contact</a>
+            <a href="#contact" class="btn-base bg-deepTeal text-white w-full text-lg">Book Appointment</a>
+            
+            <div class="mt-auto mb-10 pb-10 border-t border-gray-100 pt-6">
+                <p class="text-gray-500 mb-2">Call us directly:</p>
+                <a href="tel:+15128473290" class="text-deepTeal font-bold text-2xl">(512) 847-3290</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 2. Hero Section -->
+    <header class="relative pt-32 pb-24 lg:pt-48 lg:pb-32 bg-white overflow-hidden clip-bottom-curve">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
+                <!-- Left Text -->
+                <div class="max-w-2xl fade-up">
+                    <p class="text-warmGold font-bold tracking-wide uppercase text-sm mb-4">Trusted by Austin Families Since 2010</p>
+                    <h1 class="text-5xl lg:text-7xl font-serif leading-tight mb-6">
+                        A Healthier Smile Starts Here
+                    </h1>
+                    <p class="text-lg text-gray-600 mb-8 leading-relaxed max-w-xl">
+                        Dr. Sarah Mitchell and her team provide gentle, expert dental care for every stage of life — from your child's first visit to your dream smile makeover.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 mb-10">
+                        <a href="#contact" class="btn-base bg-deepTeal text-white hover:bg-deepTealDark shadow-lg">
+                            Book Your Appointment
+                        </a>
+                        <a href="#services" class="btn-base border-2 border-deepTeal text-deepTeal hover:bg-softMint">
+                            Explore Services
+                        </a>
+                    </div>
+                    <!-- Trust Icons -->
+                    <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 text-sm font-medium text-gray-700">
+                        <div class="flex items-center gap-2">
+                            <span class="text-deepTeal">✓</span> Accepting New Patients
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="text-deepTeal">✓</span> Same-Day Emergency Visits
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="text-deepTeal">✓</span> Most Insurance Accepted
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Artwork / Image -->
+                <div class="relative flex justify-center lg:justify-end fade-up stagger-1">
+                    <!-- Professional Unsplash Banner Image inside a decorative shape -->
+                    <div class="relative w-full max-w-lg aspect-square lg:aspect-[4/5] rounded-[40px] overflow-hidden shadow-2xl z-10">
+                        <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Beautiful healthy dental patient smiling" class="w-full h-full object-cover" />
+                        <!-- Gradient Overlay -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-deepTealDark/40 to-transparent"></div>
+                    </div>
+                    
+                    <!-- Decorative SVG Teal Circle Background -->
+                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] aspect-square bg-gradient-to-br from-softMint to-white rounded-full -z-10 opacity-70 blur-2xl"></div>
+                    
+                    <!-- Floating SVG Tooth Decorative Element -->
+                    <div class="absolute -bottom-8 -left-8 bg-white p-6 rounded-2xl shadow-xl z-20 flex items-center justify-center border border-gray-50">
+                        <svg width="60" height="60" viewBox="0 0 100 100" class="text-deepTeal">
+                            <defs>
+                                <linearGradient id="tealGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#0B6E7A" />
+                                    <stop offset="100%" stop-color="#E8F7F8" />
+                                </linearGradient>
+                            </defs>
+                            <path d="M50 15C30 15 15 30 15 50C15 65 25 75 35 85C45 95 45 85 50 85C55 85 55 95 65 85C75 75 85 65 85 50C85 30 70 15 50 15ZM35 35C40 35 45 40 45 45C45 50 40 55 35 55C30 55 25 50 25 45C25 40 30 35 35 35ZM65 35C70 35 75 40 75 45C75 50 70 55 65 55C60 55 55 50 55 45C55 40 60 35 65 35ZM50 65C45 65 40 60 40 55C40 50 45 45 50 45C55 45 60 50 60 55C60 60 55 65 50 65Z" fill="url(#tealGrad)" opacity="0.9"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 3. Trust Stats Bar -->
+    <section class="bg-deepTeal text-white py-12 relative z-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x divide-teal-600/50">
+                <div class="fade-up">
+                    <p class="text-3xl lg:text-4xl font-serif font-bold mb-1 text-warmGold">2,500+</p>
+                    <p class="text-sm font-medium text-teal-50 tracking-wide">Happy Patients</p>
+                </div>
+                <div class="fade-up stagger-1">
+                    <p class="text-3xl lg:text-4xl font-serif font-bold mb-1 text-warmGold">14 Years</p>
+                    <p class="text-sm font-medium text-teal-50 tracking-wide">of Experience</p>
+                </div>
+                <div class="fade-up stagger-2">
+                    <p class="text-3xl lg:text-4xl font-serif font-bold mb-1 text-warmGold">12</p>
+                    <p class="text-sm font-medium text-teal-50 tracking-wide">Dental Services</p>
+                </div>
+                <div class="fade-up stagger-3">
+                    <p class="text-3xl lg:text-4xl font-serif font-bold mb-1 text-warmGold">4.9★</p>
+                    <p class="text-sm font-medium text-teal-50 tracking-wide">Google Rating</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Services Section -->
+    <section id="services" class="py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-16 fade-up">
+                <h2 class="text-4xl lg:text-5xl font-serif mb-6 text-deepTeal">Everything Your Smile Needs Under One Roof</h2>
+                <p class="text-lg text-gray-600">From routine cleanings to full smile transformations — Dr. Mitchell's team handles it all.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-soft hover:-translate-y-1 transition-transform duration-300 border-b-4 border-transparent hover:border-deepTeal fade-up">
+                    <div class="w-12 h-12 bg-softMint rounded-xl flex items-center justify-center mb-6 text-deepTeal">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold font-serif mb-3 text-deepTeal">General Dentistry</h3>
+                    <p class="text-gray-600 text-sm">Routine exams, cleanings, fillings, and preventive care for the whole family.</p>
+                </div>
+                <!-- Service 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-soft hover:-translate-y-1 transition-transform duration-300 border-b-4 border-transparent hover:border-deepTeal fade-up stagger-1">
+                    <div class="w-12 h-12 bg-softMint rounded-xl flex items-center justify-center mb-6 text-deepTeal">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold font-serif mb-3 text-deepTeal">Cosmetic Dentistry</h3>
+                    <p class="text-gray-600 text-sm">Smile makeovers including veneers, bonding, and whitening.</p>
+                </div>
+                <!-- Service 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-soft hover:-translate-y-1 transition-transform duration-300 border-b-4 border-transparent hover:border-deepTeal fade-up stagger-2">
+                    <div class="w-12 h-12 bg-softMint rounded-xl flex items-center justify-center mb-6 text-deepTeal">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold font-serif mb-3 text-deepTeal">Teeth Whitening</h3>
+                    <p class="text-gray-600 text-sm">Professional in-office whitening for results up to 8 shades brighter in one visit.</p>
+                </div>
+                <!-- Service 4 -->
+                <div class="bg-white p-8 rounded-2xl shadow-soft hover:-translate-y-1 transition-transform duration-300 border-b-4 border-transparent hover:border-deepTeal fade-up">
+                    <div class="w-12 h-12 bg-softMint rounded-xl flex items-center justify-center mb-6 text-deepTeal">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold font-serif mb-3 text-deepTeal">Dental Implants</h3>
+                    <p class="text-gray-600 text-sm">Permanent tooth replacement that looks, feels, and functions like a natural tooth.</p>
+                </div>
+                <!-- Service 5 -->
+                <div class="bg-white p-8 rounded-2xl shadow-soft hover:-translate-y-1 transition-transform duration-300 border-b-4 border-transparent hover:border-deepTeal fade-up stagger-1">
+                    <div class="w-12 h-12 bg-softMint rounded-xl flex items-center justify-center mb-6 text-deepTeal">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold font-serif mb-3 text-deepTeal">Invisalign & Clear Aligners</h3>
+                    <p class="text-gray-600 text-sm">Straighten teeth discreetly without metal braces.</p>
+                </div>
+                <!-- Service 6 -->
+                <div class="bg-white p-8 rounded-2xl shadow-soft hover:-translate-y-1 transition-transform duration-300 border-b-4 border-transparent hover:border-deepTeal fade-up stagger-2">
+                    <div class="w-12 h-12 bg-softMint rounded-xl flex items-center justify-center mb-6 text-deepTeal">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold font-serif mb-3 text-deepTeal">Porcelain Veneers</h3>
+                    <p class="text-gray-600 text-sm">Ultra-thin custom shells that transform chipped, stained, or uneven teeth.</p>
+                </div>
+                <!-- Service 7 -->
+                <div class="bg-white p-8 rounded-2xl shadow-soft hover:-translate-y-1 transition-transform duration-300 border-b-4 border-transparent hover:border-deepTeal fade-up">
+                    <div class="w-12 h-12 bg-softMint rounded-xl flex items-center justify-center mb-6 text-deepTeal">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold font-serif mb-3 text-deepTeal">Root Canal Treatment</h3>
+                    <p class="text-gray-600 text-sm">Comfortable, anxiety-free root canal therapy to save your natural tooth.</p>
+                </div>
+                <!-- Service 8 -->
+                <div class="bg-white p-8 rounded-2xl shadow-soft hover:-translate-y-1 transition-transform duration-300 border-b-4 border-transparent hover:border-deepTeal fade-up stagger-1">
+                    <div class="w-12 h-12 bg-softMint rounded-xl flex items-center justify-center mb-6 text-deepTeal">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold font-serif mb-3 text-deepTeal">Dental Crowns & Bridges</h3>
+                    <p class="text-gray-600 text-sm">Custom-crafted restorations to protect damaged teeth and fill gaps.</p>
+                </div>
+                <!-- Service 9 -->
+                <div class="bg-white p-8 rounded-2xl shadow-soft hover:-translate-y-1 transition-transform duration-300 border-b-4 border-transparent hover:border-deepTeal fade-up stagger-2">
+                    <div class="w-12 h-12 bg-softMint rounded-xl flex items-center justify-center mb-6 text-deepTeal">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold font-serif mb-3 text-deepTeal">Pediatric Dentistry</h3>
+                    <p class="text-gray-600 text-sm">Gentle, fun, kid-friendly dental care from the first tooth onward.</p>
+                </div>
+                <!-- Service 10 -->
+                <div class="bg-white p-8 rounded-2xl shadow-soft hover:-translate-y-1 transition-transform duration-300 border-b-4 border-transparent hover:border-deepTeal fade-up">
+                    <div class="w-12 h-12 bg-softMint rounded-xl flex items-center justify-center mb-6 text-deepTeal">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold font-serif mb-3 text-deepTeal">Emergency Dentistry</h3>
+                    <p class="text-gray-600 text-sm">Same-day appointments for toothaches, broken teeth, and dental trauma.</p>
+                </div>
+                <!-- Service 11 -->
+                <div class="bg-white p-8 rounded-2xl shadow-soft hover:-translate-y-1 transition-transform duration-300 border-b-4 border-transparent hover:border-deepTeal fade-up stagger-1">
+                    <div class="w-12 h-12 bg-softMint rounded-xl flex items-center justify-center mb-6 text-deepTeal">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold font-serif mb-3 text-deepTeal">Gum Disease Treatment</h3>
+                    <p class="text-gray-600 text-sm">Deep cleaning and periodontal therapy to restore gum health.</p>
+                </div>
+                <!-- Service 12 -->
+                <div class="bg-white p-8 rounded-2xl shadow-soft hover:-translate-y-1 transition-transform duration-300 border-b-4 border-transparent hover:border-deepTeal fade-up stagger-2">
+                    <div class="w-12 h-12 bg-softMint rounded-xl flex items-center justify-center mb-6 text-deepTeal">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold font-serif mb-3 text-deepTeal">Sedation Dentistry</h3>
+                    <p class="text-gray-600 text-sm">Oral and nitrous oxide sedation for anxious or nervous patients.</p>
+                </div>
+            </div>
+            
+            <div class="mt-16 text-center fade-up stagger-3">
+                <a href="#contact" class="btn-base bg-deepTeal text-white hover:bg-deepTealDark shadow-md">Schedule a Consultation</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Why Choose Bright Smile Section -->
+    <section class="py-24 bg-softMint clip-top-curve relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <h2 class="text-4xl lg:text-5xl font-serif text-deepTeal mb-16 text-center md:text-left fade-up">Why Austin Patients Choose Dr. Mitchell</h2>
+            
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <!-- Left Features -->
+                <div class="space-y-6">
+                    <div class="bg-white p-6 rounded-2xl shadow-nav flex gap-4 fade-up">
+                        <div class="w-12 h-12 bg-softMint rounded-xl flex items-center justify-center text-deepTeal shrink-0">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-deepTeal font-serif mb-1">Gentle & Anxiety-Free</h4>
+                            <p class="text-gray-600 text-sm leading-relaxed">Sedation options and a calm environment for nervous patients.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-2xl shadow-nav flex gap-4 fade-up stagger-1">
+                        <div class="w-12 h-12 bg-softMint rounded-xl flex items-center justify-center text-deepTeal shrink-0">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-deepTeal font-serif mb-1">State-of-the-Art Technology</h4>
+                            <p class="text-gray-600 text-sm leading-relaxed">Digital X-rays, intraoral cameras, same-day crowns.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-2xl shadow-nav flex gap-4 fade-up stagger-2">
+                        <div class="w-12 h-12 bg-softMint rounded-xl flex items-center justify-center text-deepTeal shrink-0">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-deepTeal font-serif mb-1">Family-Friendly Practice</h4>
+                            <p class="text-gray-600 text-sm leading-relaxed">We treat patients from age 3 to 93.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-2xl shadow-nav flex gap-4 fade-up stagger-3">
+                        <div class="w-12 h-12 bg-softMint rounded-xl flex items-center justify-center text-deepTeal shrink-0">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-deepTeal font-serif mb-1">Transparent Pricing</h4>
+                            <p class="text-gray-600 text-sm leading-relaxed">Clear estimates before treatment, no surprise bills.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Quote -->
+                <div class="relative fade-up lg:pl-10">
+                    <svg class="absolute top-0 left-0 -translate-x-4 -translate-y-6 w-20 h-20 text-teal-200 opacity-50 z-0" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" /></svg>
+                    <blockquote class="relative z-10">
+                        <p class="text-3xl lg:text-4xl font-serif text-deepTealDark leading-snug mb-8">"I used to dread the dentist. Dr. Mitchell changed that completely. The most gentle, professional, and caring dental experience I've ever had."</p>
+                        <footer class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-deepTeal rounded-full flex items-center justify-center text-white font-serif font-bold text-xl">R</div>
+                            <div>
+                                <p class="font-bold text-gray-900">— Rachel T.</p>
+                                <p class="text-sm text-gray-500">Austin, TX</p>
+                            </div>
+                        </footer>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 6. About Dr. Mitchell Section -->
+    <section id="about" class="py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                <!-- Left Bio -->
+                <div class="order-2 lg:order-1 fade-up">
+                    <h2 class="text-4xl lg:text-5xl font-serif text-deepTeal mb-6">Meet Dr. Sarah Mitchell, DDS</h2>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Dr. Sarah Mitchell earned her Doctor of Dental Surgery degree from the University of Texas School of Dentistry and has been serving the Austin community since 2010. With 14 years of experience in both general and cosmetic dentistry, Dr. Mitchell is known for her gentle chairside manner, her attention to detail, and her genuine care for every patient's long-term oral health.</p>
+                    <p class="text-gray-600 mb-8 leading-relaxed">She stays current with the latest dental techniques through continuing education and is a proud member of the American Dental Association and the Texas Dental Association. When she's not in the clinic, Dr. Mitchell volunteers her dental services at Austin community health events.</p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-full bg-softMint text-deepTeal flex items-center justify-center shrink-0">✓</div>
+                            <span class="text-gray-800 font-medium">ADA & Texas Dental Association Member</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-full bg-softMint text-deepTeal flex items-center justify-center shrink-0">✓</div>
+                            <span class="text-gray-800 font-medium">UT School of Dentistry Graduate</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-full bg-softMint text-deepTeal flex items-center justify-center shrink-0">✓</div>
+                            <span class="text-gray-800 font-medium">14+ Years Serving Austin Families</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Avatar -->
+                <div class="order-1 lg:order-2 flex justify-center fade-up stagger-1">
+                    <div class="w-72 h-72 lg:w-96 lg:h-96 rounded-full bg-deepTeal text-white flex items-center justify-center relative shadow-2xl">
+                        <!-- Decorative border -->
+                        <div class="absolute inset-2 border-4 border-white/20 rounded-full pointer-events-none"></div>
+                        <span class="text-8xl lg:text-9xl font-serif">SM</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Patient Info Section -->
+    <section id="patient-info" class="py-24 bg-gray-50 border-t border-gray-100 relative clip-bottom-curve">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <h2 class="text-4xl lg:text-5xl font-serif text-deepTeal mb-16 text-center fade-up">Everything You Need to Know Before Your Visit</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-nav fade-up border-t-4 border-deepTeal">
+                    <h3 class="text-2xl font-serif text-deepTeal mb-4">Insurance</h3>
+                    <p class="text-gray-600 leading-relaxed">We accept Delta Dental, Cigna, Aetna, BCBS, MetLife, and United Healthcare. Questions? Call us and we'll verify your benefits before your visit.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-nav fade-up stagger-1 border-t-4 border-warmGold">
+                    <h3 class="text-2xl font-serif text-deepTeal mb-4">New Patients</h3>
+                    <p class="text-gray-600 leading-relaxed">New patients receive a free consultation. Please arrive 10 minutes early to complete your paperwork. We also offer digital intake forms — ask when you book.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-nav fade-up stagger-2 border-t-4 border-softMint">
+                    <h3 class="text-2xl font-serif text-deepTeal mb-4">Financing</h3>
+                    <p class="text-gray-600 leading-relaxed">Don't let cost stop you from the care you need. We offer CareCredit financing and flexible in-house payment plans. 0% interest options available.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. Service Areas Section -->
+    <section class="py-24 bg-white relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <h2 class="text-3xl lg:text-4xl font-serif text-deepTeal mb-8 fade-up">Serving Austin & Surrounding Communities</h2>
+            
+            <div class="flex flex-wrap justify-center gap-4 mb-8 fade-up stagger-1">
+                <span class="px-6 py-2 bg-softMint text-deepTeal rounded-full font-medium shadow-sm">Austin TX</span>
+                <span class="px-6 py-2 bg-softMint text-deepTeal rounded-full font-medium shadow-sm">Round Rock TX</span>
+                <span class="px-6 py-2 bg-softMint text-deepTeal rounded-full font-medium shadow-sm">Cedar Park TX</span>
+                <span class="px-6 py-2 bg-softMint text-deepTeal rounded-full font-medium shadow-sm">Pflugerville TX</span>
+                <span class="px-6 py-2 bg-softMint text-deepTeal rounded-full font-medium shadow-sm">Georgetown TX</span>
+                <span class="px-6 py-2 bg-white border border-gray-200 text-gray-700 rounded-full font-medium shadow-sm transition hover:bg-gray-50">Leander TX</span>
+                <span class="px-6 py-2 bg-white border border-gray-200 text-gray-700 rounded-full font-medium shadow-sm transition hover:bg-gray-50">Buda TX</span>
+                <span class="px-6 py-2 bg-white border border-gray-200 text-gray-700 rounded-full font-medium shadow-sm transition hover:bg-gray-50">Kyle TX</span>
+                <span class="px-6 py-2 bg-white border border-gray-200 text-gray-700 rounded-full font-medium shadow-sm transition hover:bg-gray-50">Manor TX</span>
+            </div>
+            
+            <p class="text-gray-600 fade-up stagger-2">Not sure if we're near you? Call <a href="tel:+15128473290" class="text-deepTeal font-bold hover:underline">(512) 847-3290</a> and we'll help.</p>
+        </div>
+    </section>
+    <!-- 9. Testimonials Section -->
+    <section class="py-24 bg-softMint relative clip-top-curve">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <h2 class="text-4xl lg:text-5xl font-serif text-deepTeal mb-16 text-center fade-up">What Our Patients Say</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-nav fade-up">
+                    <div class="text-warmGold mb-4 text-xl tracking-widest">★★★★★</div>
+                    <p class="text-gray-600 mb-6 italic">"Dr. Mitchell is absolutely wonderful. She explained every step of my root canal and I felt zero pain. I was shocked at how easy it was. Best dentist in Austin."</p>
+                    <p class="font-bold text-gray-900">— Kevin M., Austin TX</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-nav fade-up stagger-1">
+                    <div class="text-warmGold mb-4 text-xl tracking-widest">★★★★★</div>
+                    <p class="text-gray-600 mb-6 italic">"My kids actually look forward to going to the dentist now. The team is so patient and fun with them. We drive from Round Rock and it's worth every minute."</p>
+                    <p class="font-bold text-gray-900">— Amanda L., Round Rock TX</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-nav fade-up stagger-2">
+                    <div class="text-warmGold mb-4 text-xl tracking-widest">★★★★★</div>
+                    <p class="text-gray-600 mb-6 italic">"Got Invisalign here and the results are beyond what I expected. Dr. Mitchell checked in with me at every single step. Professional, warm, and genuinely caring."</p>
+                    <p class="font-bold text-gray-900">— David S., Cedar Park TX</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. CTA Banner -->
+    <section class="py-20 bg-warmGold relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <h2 class="text-4xl lg:text-5xl font-serif text-white mb-6 fade-up drop-shadow-md">Ready for a Smile You're Proud Of?</h2>
+            <p class="text-xl text-white/90 mb-10 fade-up stagger-1 drop-shadow-sm">Book your appointment today. New patients welcome. Most insurance accepted.</p>
+            <div class="fade-up stagger-2">
+                <a href="#contact" class="btn-base bg-deepTeal text-white hover:bg-deepTealDark shadow-xl text-lg px-8 py-4 font-bold border border-transparent hover:border-white">Book Appointment — (512) 847-3290</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 11. Contact & Booking Section -->
+    <section id="contact" class="py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-16">
+                <!-- Left Details -->
+                <div class="fade-up">
+                    <h2 class="text-4xl font-serif text-deepTeal mb-8">Visit Our Clinic</h2>
+                    
+                    <div class="space-y-6 mb-12">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-softMint flex items-center justify-center text-deepTeal shrink-0 mt-1">📞</div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Phone</h4>
+                                <a href="tel:+15128473290" class="text-gray-600 hover:text-deepTeal transition text-lg">(512) 847-3290</a>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-softMint flex items-center justify-center text-deepTeal shrink-0 mt-1">📍</div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Address</h4>
+                                <p class="text-gray-600">4821 Burnet Road, Suite 105<br>Austin, TX 78756</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-softMint flex items-center justify-center text-deepTeal shrink-0 mt-1">✉️</div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Email</h4>
+                                <a href="mailto:appointments@brightsmileaustin.com" class="text-gray-600 hover:text-deepTeal transition">appointments@brightsmileaustin.com</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3 class="text-2xl font-serif text-deepTeal mb-6">Office Hours</h3>
+                    <div class="bg-gray-50 rounded-2xl p-6 shadow-sm border border-gray-100">
+                        <table class="w-full text-sm">
+                            <tbody class="divide-y divide-gray-200">
+                                <tr class="py-3 flex justify-between"><td class="font-medium text-gray-700 py-3">Monday</td><td class="text-gray-600 py-3">8:00 AM – 5:00 PM</td></tr>
+                                <tr class="py-3 flex justify-between"><td class="font-medium text-gray-700 py-3">Tuesday</td><td class="text-gray-600 py-3">8:00 AM – 6:00 PM</td></tr>
+                                <tr class="py-3 flex justify-between"><td class="font-medium text-gray-700 py-3">Wednesday</td><td class="text-gray-600 py-3">8:00 AM – 5:00 PM</td></tr>
+                                <tr class="py-3 flex justify-between"><td class="font-medium text-gray-700 py-3">Thursday</td><td class="text-gray-600 py-3">9:00 AM – 7:00 PM</td></tr>
+                                <tr class="py-3 flex justify-between"><td class="font-medium text-gray-700 py-3">Friday</td><td class="text-gray-600 py-3">8:00 AM – 3:00 PM</td></tr>
+                                <tr class="py-3 flex justify-between"><td class="font-medium text-gray-700 py-3">Saturday</td><td class="text-gray-600 py-3">9:00 AM – 2:00 PM</td></tr>
+                                <tr class="py-3 flex justify-between"><td class="font-medium text-gray-700 py-3">Sunday</td><td class="text-gray-500 py-3 italic">Closed (Emergency line)</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Right Form -->
+                <div class="fade-up stagger-1">
+                    <div class="bg-white rounded-3xl shadow-nav p-8 border border-gray-100 relative">
+                        <!-- Success Message Overlay -->
+                        <div id="form-success" class="absolute inset-0 bg-white rounded-3xl z-20 hidden flex-col items-center justify-center text-center p-8">
+                            <div class="w-20 h-20 bg-softMint rounded-full flex items-center justify-center text-deepTeal text-3xl mb-6">✓</div>
+                            <h3 class="text-3xl font-serif text-deepTeal mb-4">Request Sent!</h3>
+                            <p class="text-lg text-gray-600">Thank you! We'll confirm your appointment within 2 hours.</p>
+                            <button type="button" onclick="document.getElementById('form-success').classList.add('hidden'); document.getElementById('appointment-form').reset();" class="mt-8 btn-base border-2 border-deepTeal text-deepTeal hover:bg-softMint">Book Another Appointment</button>
+                        </div>
+
+                        <h3 class="text-2xl font-serif text-deepTeal mb-6">Request Appointment</h3>
+                        <form id="appointment-form" class="space-y-5" onsubmit="event.preventDefault(); handleFormSubmit(this);">
+                            <div>
+                                <label for="form_name" class="block text-sm font-medium text-gray-700 mb-1">Full Name *</label>
+                                <input type="text" id="form_name" required class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-deepTeal focus:border-deepTeal transition bg-gray-50 invalid:border-red-500">
+                            </div>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                                <div>
+                                    <label for="form_phone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number *</label>
+                                    <input type="tel" id="form_phone" required class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-deepTeal transition bg-gray-50 invalid:border-red-500">
+                                </div>
+                                <div>
+                                    <label for="form_email" class="block text-sm font-medium text-gray-700 mb-1">Email Address *</label>
+                                    <input type="email" id="form_email" required class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-deepTeal transition bg-gray-50 invalid:border-red-500">
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                                <div>
+                                    <label for="form_date" class="block text-sm font-medium text-gray-700 mb-1">Preferred Date *</label>
+                                    <input type="date" id="form_date" required class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-deepTeal transition bg-gray-50 text-gray-700 invalid:border-red-500">
+                                </div>
+                                <div>
+                                    <label for="form_time" class="block text-sm font-medium text-gray-700 mb-1">Preferred Time *</label>
+                                    <select id="form_time" required class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-deepTeal transition bg-gray-50 text-gray-700 invalid:border-red-500">
+                                        <option value="">Select Time</option>
+                                        <option value="Morning">Morning</option>
+                                        <option value="Afternoon">Afternoon</option>
+                                        <option value="Evening">Evening</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="form_service" class="block text-sm font-medium text-gray-700 mb-1">Service Needed *</label>
+                                <select id="form_service" required class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-deepTeal transition bg-gray-50 text-gray-700 invalid:border-red-500">
+                                    <option value="">Select a Service</option>
+                                    <option value="General Dentistry">General Dentistry</option>
+                                    <option value="Cosmetic Dentistry">Cosmetic Dentistry</option>
+                                    <option value="Teeth Whitening">Teeth Whitening</option>
+                                    <option value="Dental Implants">Dental Implants</option>
+                                    <option value="Invisalign">Invisalign & Clear Aligners</option>
+                                    <option value="Porcelain Veneers">Porcelain Veneers</option>
+                                    <option value="Root Canal">Root Canal Treatment</option>
+                                    <option value="Crowns Bridges">Dental Crowns & Bridges</option>
+                                    <option value="Pediatric">Pediatric Dentistry</option>
+                                    <option value="Emergency">Emergency Dentistry</option>
+                                    <option value="Gum Disease">Gum Disease Treatment</option>
+                                    <option value="Sedation">Sedation Dentistry</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Are you a new patient? *</label>
+                                <div class="flex gap-4">
+                                    <label class="flex items-center gap-2 cursor-pointer">
+                                        <input type="radio" name="new_patient" value="yes" required class="w-4 h-4 text-deepTeal focus:ring-deepTeal">
+                                        <span class="text-gray-700">Yes</span>
+                                    </label>
+                                    <label class="flex items-center gap-2 cursor-pointer">
+                                        <input type="radio" name="new_patient" value="no" class="w-4 h-4 text-deepTeal focus:ring-deepTeal">
+                                        <span class="text-gray-700">No</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="form_notes" class="block text-sm font-medium text-gray-700 mb-1">Notes / Message</label>
+                                <textarea id="form_notes" rows="3" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-deepTeal transition bg-gray-50 resize-none"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full btn-base bg-deepTeal text-white hover:bg-deepTealDark shadow-md">Request Appointment</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 12. Footer -->
+    <footer class="bg-deepTealDark text-teal-50 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-12 border-b border-teal-700 pb-12 mb-8">
+                <!-- Branding -->
+                <div>
+                    <a href="#" class="flex items-center gap-3 mb-6">
+                        <svg width="32" height="32" viewBox="0 0 100 100" class="text-white" fill="currentColor">
+                            <path d="M50 20 C25 20 20 40 20 55 C20 75 35 85 45 85 C50 85 50 70 50 70 C50 70 50 85 55 85 C65 85 80 75 80 55 C80 40 75 20 50 20 Z"/>
+                        </svg>
+                        <span class="font-sans font-bold text-2xl text-white tracking-tight">Bright Smile Dental</span>
+                    </a>
+                    <p class="text-teal-200 text-lg mb-6">Your Smile Deserves the Best Care in Austin</p>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-white font-serif text-xl mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-teal-200 hover:text-white transition">Home</a></li>
+                        <li><a href="#services" class="text-teal-200 hover:text-white transition">Services</a></li>
+                        <li><a href="#about" class="text-teal-200 hover:text-white transition">About Dr. Mitchell</a></li>
+                        <li><a href="#patient-info" class="text-teal-200 hover:text-white transition">Patient Info</a></li>
+                        <li><a href="#contact" class="text-teal-200 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Summary -->
+                <div>
+                    <h4 class="text-white font-serif text-xl mb-6">Contact Us</h4>
+                    <ul class="space-y-3">
+                        <li><a href="tel:+15128473290" class="text-teal-200 hover:text-white transition font-bold">(512) 847-3290</a></li>
+                        <li class="text-teal-200">4821 Burnet Road, Suite 105<br>Austin, TX 78756</li>
+                        <li><a href="mailto:appointments@brightsmileaustin.com" class="text-teal-200 hover:text-white transition">appointments@brightsmileaustin.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="text-center text-teal-400 text-sm">
+                <p>&copy; 2025 Bright Smile Dental — 4821 Burnet Rd, Austin TX. Dr. Sarah Mitchell, DDS. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Form Submit Handler Script -->
+    <script>
+        function handleFormSubmit(form) {
+            if (form.checkValidity()) {
+                document.getElementById('form-success').classList.remove('hidden');
+                document.getElementById('form-success').classList.add('flex');
+            }
+        }
+    </script>
+
+    <!-- Intersection Observer for Animations & Logic -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Scroll Animation Observer
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+            // Navbar Scroll Effect
+            const nav = document.getElementById('main-nav');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 20) {
+                    nav.classList.add('scrolled');
+                } else {
+                    nav.classList.remove('scrolled');
+                }
+            });
+
+            // Mobile Menu Toggle
+            const mobileBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuIcon = document.getElementById('menu-icon');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+            let isMenuOpen = false;
+
+            const toggleMenu = () => {
+                isMenuOpen = !isMenuOpen;
+                if (isMenuOpen) {
+                    mobileMenu.classList.add('open');
+                    menuIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>';
+                    document.body.style.overflow = 'hidden';
+                } else {
+                    mobileMenu.classList.remove('open');
+                    menuIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>';
+                    document.body.style.overflow = '';
+                }
+            };
+
+            mobileBtn.addEventListener('click', toggleMenu);
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', toggleMenu);
+            });
+            
+            // Initial call to set nav state correctly if already scrolled
+            if (window.scrollY > 20) nav.classList.add('scrolled');
+        });
+    </script>
+</body>
+</html>
